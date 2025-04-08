@@ -2,7 +2,7 @@ name: CI  Voll Med
 
 on:
   push:
-    branches:["main"]
+     branches: ["main"]
     pull_request:
      branches: ["main"]
 
@@ -18,7 +18,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '17'
-        distribution 'temurin'
+        distribution: 'temurin'
         cache: maven
 
       - name: Configura Docker compose
