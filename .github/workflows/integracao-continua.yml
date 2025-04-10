@@ -34,7 +34,4 @@ jobs:
     - name: Executa os testes unitários
       run: mvn -B verify
 
-    - name: Analise estática
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ThiagoNery93_api
+    
