@@ -34,10 +34,9 @@ jobs:
     - name: Executa os testes unitários
       run: mvn -B verify
 
-    - name: Analise estática
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Análise estática
+    env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ThiagoNery93_api
 
-    
